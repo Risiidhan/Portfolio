@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Cards = () => {
+const Cards = ({prop}) => {
     return (
         <>
             <div className="inner-glass-effect px-6 py-3">

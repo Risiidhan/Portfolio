@@ -3,18 +3,32 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 import Cards from './Cards'
+import { useState, useEffect } from 'react';
 
-const x = [1, 2, 3, 4]
+const Carousel = ({props}) => {
+    const [slidesPerView, setSlidesPerView] = useState(2);
 
-const Carousel = () => {
+    useEffect(() => {
+        const updateSlidesPerView = () => {
+            if (window.innerWidth >= 768)
+                setSlidesPerView(3); 
+            else
+                setSlidesPerView(1);
+        };
+
+        updateSlidesPerView();
+        window.addEventListener('resize', updateSlidesPerView);
+        return () => window.removeEventListener('resize', updateSlidesPerView);
+    }, []);
+
     return (
         <Swiper
             effect={'coverflow'}
             grabCursor={true}
             centeredSlides={true}
-            slidesPerView={3}
+            slidesPerView={slidesPerView}
             coverflowEffect={{
                 rotate: 15,
                 stretch: 0,
@@ -23,12 +37,16 @@ const Carousel = () => {
                 slideShadows: true,
             }}
             pagination={true}
-            modules={[EffectCoverflow, Pagination]}
+            autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+            modules={[EffectCoverflow, Pagination, Autoplay]}
             className="mySwiper"
         >
-            {x.map((item, index) => (
+            {props.map((item, index) => (
                 <SwiperSlide key={index}>
-                    <Cards />
+                    <Cards prop={item}/>
                 </SwiperSlide>
             ))}
         </Swiper>

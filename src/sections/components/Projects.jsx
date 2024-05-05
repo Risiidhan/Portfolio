@@ -4,10 +4,11 @@ import { motion } from 'framer-motion'
 import { fadeIn } from '../partials/framer-motion'
 
 const Projects = () => {
+    const x = [1, 2, 3]
+
     return (
         <>
             <div className="lg:h-96 my-28 grid grid-cols-3 gap-4 md:pt-0 lg:pt-32">
-              
                 <motion.div
                     variants={fadeIn("right", 0.2)}
                     initial="hidden"
@@ -23,7 +24,7 @@ const Projects = () => {
                     place-items-center md:place-items-start
                     px-6 py-6 tracking-wide text-left
                     '>
-                    <Carousel />
+                    <Carousel props={x} />
                 </div>
             </div>
         </>
