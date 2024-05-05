@@ -21,7 +21,7 @@ const HeroSection = () => {
             <span className='text-base tracking-widest'>WELCOME TO MY PORTFOLIO</span>
             <button
               type="button"
-              class="
+              className="
               bg-gradient-to-r from-fuchsia-500 to-cyan-500
               w-1/2 lg:w-1/4 text-center p-2 rounded-full 
               text-xs font-medium uppercase mt-4"

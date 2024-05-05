@@ -1,6 +1,7 @@
 import './index.css'
 import About from './sections/components/About'
 import HeroSection from './sections/components/HeroSection'
+import Projects from './sections/components/Projects'
 import Tools from './sections/components/Tools'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <HeroSection />
         <Tools />
         <About />
+        <Projects />
         </div>
       </section>
     </>

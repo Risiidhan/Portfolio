@@ -11,8 +11,11 @@ const Tools = () => {
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.7 }}
                 className='md:pt-0 md:pr-10 lg:pr-0 lg:pt-20'>
-                <h1 className='text-center text-2xl md:text-3xl lg:text-4xl mb-12 font-bold tracking-wide'>Languages and Tools:</h1>
                 <div className='inner-glass-effect'>
+                    <h1 className='text-center md:text-left text-xl pl-0 md:pl-6 pt-3 md:text-2xl lg:text-3xl font-bold'>
+                        Tools</h1>
+                    <h1 className='text-center md:text-left text-sm pl-0 md:pl-6 pt-3 md:text-md lg:text-xl mb-4 font-semibold tracking-wide'>
+                        Languages and Frameworks:</h1>
                     <Marquee pauseOnHover>
                         <div className='flex items-center space-x-8 py-3 md:py-6'>
                             <a className='w-9 md:w-16 h-9 md:h-16 mx-3' href="https://angular.io" target="blank" rel="noreferrer"> <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" /> </a>
