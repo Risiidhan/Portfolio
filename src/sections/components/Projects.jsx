@@ -21,8 +21,8 @@ const Projects = () => {
           const data = await response.json();
 
           console.log(data);
-          
-          if (cachedRepos.length==0) {
+
+          if (cachedRepos.length == 0) {
             setCachedRepos(data);
           }
         } else {
@@ -35,11 +35,11 @@ const Projects = () => {
 
     // Check if cached data exists
     if (cachedRepos.length == 0) {
-      fetchRepos(); 
+      fetchRepos();
     } else {
       console.log('Using cached repository data:', cachedRepos);
     }
-  }, []); 
+  }, []);
   return (
     <>
       <div className="lg:h-96 my-28 grid grid-cols-4 gap-3 md:pt-0 lg:pt-32">
@@ -49,8 +49,13 @@ const Projects = () => {
           whileInView={"show"}
           viewport={{ once: false, amount: 0.7 }}
           className='md:col-span-1 col-span-4  grid place-items-center'>
-          <span className='text-3xl md:text-4xl lg:text-6xl mb-5 font-semibold'>
+          <span className='text-3xl md:text-4xl lg:text-6xl m font-semibold text-center md:text-left'>
             Projects
+            <br />
+            <a className='text-sm md:text-md lg:text-lg mb-5 underline underline-offset-8 md:tracking-normal lg:tracking-wide cursor-pointer'
+              onClick={() => window.open('https://github.com/Risiidhan?tab=repositories', "_blank")}>
+              View All Projects - Github
+            </a>
           </span>
         </motion.div>
         <div className='
