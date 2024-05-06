@@ -5,26 +5,41 @@ import { fadeIn } from '../partials/framer-motion'
 import { useState, useEffect } from 'react';
 
 const Projects = () => {
-  const x = [1, 2, 3, 3, 3, 3]
   const [repos, setRepos] = useState([]);
+  const [cachedRepos, setCachedRepos] = useState([]);
 
-    useEffect(() => {
-      const fetchRepos = async () => {
-        try {
-          const response = await fetch('https://api.github.com/users/risiidhan/starred');
-          if (response.ok) {
-            const data = await response.json();
-            setRepos(data);
-          } else {
-            console.error('Error fetching repositories:', response.statusText);
+  useEffect(() => {
+    const fetchRepos = async () => {
+      try {
+        const response = await fetch('https://api.github.com/users/risiidhan/starred', {
+          headers: {
+            Authorization: `token ${import.meta.env.VITE_API_TOKEN}`,
+          },
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+
+          console.log(data);
+          
+          if (cachedRepos.length==0) {
+            setCachedRepos(data);
           }
-        } catch (error) {
-          console.error('Error fetching repositories:', error);
+        } else {
+          console.error('Error fetching repositories:', response.statusText);
         }
-      };
-      fetchRepos();
-    }, [])
+      } catch (error) {
+        console.error('Error fetching repositories:', error);
+      }
+    };
 
+    // Check if cached data exists
+    if (cachedRepos.length == 0) {
+      fetchRepos(); 
+    } else {
+      console.log('Using cached repository data:', cachedRepos);
+    }
+  }, []); 
   return (
     <>
       <div className="lg:h-96 my-28 grid grid-cols-4 gap-3 md:pt-0 lg:pt-32">
@@ -43,7 +58,7 @@ const Projects = () => {
                     place-items-center md:place-items-start
                     px-6 py-6 tracking-wide text-left
                     '>
-          <Carousel props={repos} />
+          <Carousel props={cachedRepos} />
         </div>
       </div>
     </>

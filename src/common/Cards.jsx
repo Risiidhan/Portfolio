@@ -21,7 +21,7 @@ const Cards = ({ prop }) => {
                 maxHeight = Math.max(maxHeight, card.clientHeight);
             });
             cards.forEach(card => {
-                card.style.height = `${maxHeight}px`;
+                card.style.height = `${maxHeight+0.5}px`;
             });
         };
 
@@ -33,24 +33,24 @@ const Cards = ({ prop }) => {
     return (
         <>
             <div ref={cardRef} className="inner-glass-effect px-6 py-3 card-container">
-            <div className="flex items-center justify-between py-2">
-            <div className='w-6 h-6'>
-                <img src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${lang}/${lang}-original.svg`} />
-                {/* <i style={{ fontSize: "large" }} className={`devicon-${lang}-plain colored pt-2`}></i> */}
-            </div>
-            <div className='flex justify-end items-center gap-1 w-24 h-px'>
-                <FaStar /> {prop.stargazers_count}
-                <TbGitFork /> {prop.forks_count}
-            </div>
-            </div>
+                <div className="flex items-center justify-between py-2">
+                    <div className='w-6 h-6'>
+                        <img src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${lang}/${lang}-original.svg`} />
+                        {/* <i style={{ fontSize: "large" }} className={`devicon-${lang}-plain colored pt-2`}></i> */}
+                    </div>
+                    <div className='flex justify-end items-center gap-1 w-24 h-px'>
+                        <FaStar /> {prop.stargazers_count}
+                        <TbGitFork /> {prop.forks_count}
+                    </div>
+                </div>
 
                 <h5 className="block font-sans text-xl font-medium  ">
                     {prop.name}
                 </h5>
-                <p className="text-sm py-3 block font-sans text-base font-light leading-relaxed antialiased">
+                <p className="text-sm py-3 pb-6 block font-sans text-base font-light leading-relaxed antialiased">
                     {prop.description}
                 </p>
-                <div className="flex items-center gap-2 absolute bottom-4 left-4 right-4">
+                <div className="flex items-center gap-2 absolute bottom-4 mb-3">
                     <button
                         className="flex justify-center items-center border-2 text-xs px-3 py-1 border-amber-300"
                         type="button"
@@ -60,17 +60,20 @@ const Cards = ({ prop }) => {
                         <FaGithub className='mr-1' />
                         Source
                     </button>
-                    <button
-                        className="flex justify-center items-center border-2 text-xs px-3 py-1 border-amber-300"
-                        type="button"
-                        data-ripple-light="true"
-                    >
-                        <FaLink className='mr-1' />
-                        Website
-                    </button>
+                    {prop.homepage && (
+                        <button
+                            className="flex justify-center items-center border-2 text-xs px-3 py-1 border-amber-300"
+                            type="button"
+                            data-ripple-light="true"
+                            onClick={() => window.open(prop.homepage, "_blank")}
+                        >
+                            <FaLink className='mr-1' />
+                            Website
+                        </button>
+                    )}
                 </div>
 
-                
+
             </div>
         </>
 
