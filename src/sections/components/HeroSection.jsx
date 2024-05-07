@@ -6,15 +6,15 @@ import { fadeIn } from '../partials/framer-motion'
 const HeroSection = () => {
   return (
     <>
-      <div className="lg:h-96 my-28 grid grid-cols-2 gap-4">
+      <motion.div
+        id='hero'
+        variants={fadeIn("up", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+        className="lg:h-96 mb-24 md:my-28 grid grid-cols-2 gap-4">
         <div className='md:col-span-1 col-span-2 md:order-1 order-2 grid place-items-center'>
-          <motion.div
-            variants={fadeIn("right", 0.2)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.7 }}
-
-            className="grid place-content-center">
+          <div className="grid place-content-center">
             <span className='text-3xl md:text-4xl lg:text-8xl mb-1 font-semibold tracking-widest'>Hi,</span>
             <span className='text-3xl md:text-4xl lg:text-6xl mb-5 font-semibold tracking-widest'>I'm Risiidhan Punniymoorthy</span>
             <span className='text-base tracking-widest mb-5'>Software engineer | BEng in (Hons) | Full-Stack Developer</span>
@@ -28,15 +28,10 @@ const HeroSection = () => {
               data-twe-ripple-init>
               Download CV
             </button>
-          </motion.div>
+          </div>
         </div>
 
-        <motion.div
-          variants={fadeIn("left", 0.2)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
-          className='
+        <div className='
             md:col-span-1 col-span-2 
             md:order-2 order-1 
             md:pl-16 p-1 grid place-items-center'>
@@ -45,8 +40,8 @@ const HeroSection = () => {
             src={profile}
             alt="Portfolio Picture"
           />
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </>
   )
 }

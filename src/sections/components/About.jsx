@@ -5,7 +5,14 @@ import { fadeIn } from '../partials/framer-motion'
 const About = () => {
   return (
     <>
-      <div className="lg:h-96 my-28 grid grid-cols-3 gap-4 md:pt-0 lg:pt-20">
+      <motion.div
+        id="about"
+        variants={fadeIn("up", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+
+        className="lg:h-96 my-28 grid grid-cols-3 gap-4 md:pt-0 lg:pt-20">
         <div
           className='
             md:col-span-2 col-span-3 
@@ -31,17 +38,12 @@ const About = () => {
           as the top performer in my graduating batch, I have consistently demonstrated a
           strong aptitude for academic excellence and a passion for continuous learning.
         </div>
-        <motion.div
-          variants={fadeIn("left", 0.2)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
-          className='md:col-span-1 col-span-3 md:order-2 order-1 grid place-items-center'>
+        <div className='md:col-span-1 col-span-3 md:order-2 order-1 grid place-items-center'>
           <span className='text-3xl md:text-4xl lg:text-6xl mb-5 font-semibold'>
             About Me
           </span>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </>
 
   )

@@ -6,10 +6,10 @@ const Tools = () => {
     return (
         <>
             <motion.section
-                variants={fadeIn("up", 0.2)}
+                variants={fadeIn("up", 0.1)}
                 initial="hidden"
                 whileInView={"show"}
-                viewport={{ once: false, amount: 0.7 }}
+                viewport={{ once: true, amount: 0.5 }}
                 className='md:pt-0 md:pr-10 lg:pr-0 lg:pt-20'>
                 <div className='inner-glass-effect'>
                     <h1 className='text-center md:text-left text-xl pl-0 md:pl-6 pt-3 md:text-2xl lg:text-3xl font-bold'>

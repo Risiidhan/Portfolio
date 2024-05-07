@@ -24,7 +24,7 @@ const Projects = () => {
 
   return (
     <>
-      <div className="lg:h-96 my-28 grid grid-cols-4 gap-3 md:pt-0 lg:pt-32">
+      <div id='projects' className="lg:h-96 my-28 grid grid-cols-4 gap-3 md:pt-0 lg:pt-32">
         <motion.div
           variants={fadeIn("right", 0.2)}
           initial="hidden"
@@ -34,7 +34,7 @@ const Projects = () => {
           <span className='text-3xl md:text-4xl lg:text-6xl m font-semibold text-center md:text-left'>
             Projects
             <br />
-            <a className='text-sm md:text-md lg:text-lg mb-5 underline underline-offset-8 md:tracking-normal lg:tracking-wide cursor-pointer'
+            <a className='text-sm md:text-md lg:text-lg mb-5 underline underline-offset-8  cursor-pointer'
               onClick={() => window.open('https://github.com/Risiidhan?tab=repositories', "_blank")}>
               View All Projects - Github
             </a>
