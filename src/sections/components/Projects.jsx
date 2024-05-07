@@ -3,36 +3,16 @@ import Carousel from '../../common/Carousel'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../partials/framer-motion'
 import { useState, useEffect } from 'react';
+import { getRepos } from '../../services/getRepos';
 
 const Projects = () => {
-  const [repos, setRepos] = useState([]);
   const [cachedRepos, setCachedRepos] = useState([]);
 
   useEffect(() => {
     const fetchRepos = async () => {
-      try {
-        const response = await fetch('https://api.github.com/users/risiidhan/starred', {
-          headers: {
-            Authorization: `token ${import.meta.env.VITE_API_TOKEN}`,
-          },
-        });
-
-        if (response.ok) {
-          const data = await response.json();
-
-          console.log(data);
-
-          if (cachedRepos.length == 0) {
-            setCachedRepos(data);
-          }
-        } else {
-          console.error('Error fetching repositories:', response.statusText);
-        }
-      } catch (error) {
-        console.error('Error fetching repositories:', error);
-      }
+      let res = await getRepos();
+      setCachedRepos(res);
     };
-
     // Check if cached data exists
     if (cachedRepos.length == 0) {
       fetchRepos();
@@ -40,6 +20,8 @@ const Projects = () => {
       console.log('Using cached repository data:', cachedRepos);
     }
   }, []);
+
+
   return (
     <>
       <div className="lg:h-96 my-28 grid grid-cols-4 gap-3 md:pt-0 lg:pt-32">

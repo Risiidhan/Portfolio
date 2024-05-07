@@ -1,5 +1,6 @@
 import './index.css'
 import About from './sections/components/About'
+import Contact from './sections/components/Contact'
 import HeroSection from './sections/components/HeroSection'
 import Projects from './sections/components/Projects'
 import Tools from './sections/components/Tools'
@@ -13,6 +14,7 @@ function App() {
         <Tools />
         <About />
         <Projects />
+        <Contact />
         </div>
       </section>
     </>

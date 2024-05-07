@@ -22,7 +22,7 @@ const HeroSection = () => {
             <button
               type="button"
               className="
-              bg-gradient-to-r from-fuchsia-500 to-cyan-500
+              bg-gradient-to-r from-cyan-500 to-fuchsia-500
               w-1/2 lg:w-1/4 text-center p-2 rounded-full 
               text-xs font-medium uppercase mt-4"
               data-twe-ripple-init>
