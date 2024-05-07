@@ -26,7 +26,7 @@ const Contact = () => {
                         <a href="https://x.com/risiidhan" target="blank"><img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg" alt="risiidhan" height="30" width="40" /></a>
                         <a href="https://www.linkedin.com/in/risiidhan/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="risiidhan punniyamoorthy" height="30" width="40" /></a>
                         <a href="https://instagram.com/risiidhan" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="risiidhan" height="30" width="40" /></a>
-                        <a href="https://www.hackerrank.com/rkishon4" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="rkishon4" height="30" width="40" /></a>
+                        <a href="https://www.hackerrank.com/rkishon4" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="risiidhan" height="30" width="40" /></a>
                         </div>
                     </span>
                 </motion.div>
