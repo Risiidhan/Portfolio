@@ -14,6 +14,7 @@ const Cards = ({ prop }) => {
 
 
     useEffect(() => {
+        let looped = false;
         const setMaxHeight = () => {
             const cards = document.querySelectorAll('.card-container');
             let maxHeight = 0;
@@ -23,11 +24,13 @@ const Cards = ({ prop }) => {
             cards.forEach(card => {
                 card.style.height = `${maxHeight+0.5}px`;
             });
+            looped = true;
         };
 
-        setMaxHeight();
-        window.addEventListener('resize', setMaxHeight);
-        return () => window.removeEventListener('resize', setMaxHeight);
+        if(!looped)
+            setMaxHeight();
+        // window.addEventListener('resize', setMaxHeight);
+        // return () => window.removeEventListener('resize', setMaxHeight);
     }, []);
 
     return (
