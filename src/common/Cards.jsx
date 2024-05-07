@@ -14,23 +14,25 @@ const Cards = ({ prop }) => {
 
 
     useEffect(() => {
-        let looped = false;
         const setMaxHeight = () => {
             const cards = document.querySelectorAll('.card-container');
             let maxHeight = 0;
             cards.forEach(card => {
                 maxHeight = Math.max(maxHeight, card.clientHeight);
             });
-            cards.forEach(card => {
-                card.style.height = `${maxHeight+0.5}px`;
-            });
-            looped = true;
+            return maxHeight + 1; // Return the maxHeight value with the extra 1px
         };
-
-        if(!looped)
-            setMaxHeight();
-        // window.addEventListener('resize', setMaxHeight);
-        // return () => window.removeEventListener('resize', setMaxHeight);
+    
+        const applyMaxHeight = () => {
+            const maxHeight = setMaxHeight();
+            const cards = document.querySelectorAll('.card-container');
+            cards.forEach(card => {
+                card.style.height = `${maxHeight}px`;
+            });
+            console.log(maxHeight); // Log the maxHeight
+        };
+    
+        applyMaxHeight(); // Apply max height initially
     }, []);
 
     return (
