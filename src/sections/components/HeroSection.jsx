@@ -19,7 +19,7 @@ const HeroSection = () => {
             <span className='text-3xl md:text-4xl lg:text-6xl mb-5 font-semibold tracking-widest'>I'm Risiidhan Punniymoorthy</span>
             <span className='text-base tracking-widest mb-5'>Software engineer | BEng in (Hons) | Full-Stack Developer</span>
             <span className='text-base tracking-widest'>WELCOME TO MY PORTFOLIO</span>
-            <button
+            {/* <button
               type="button"
               className="
               bg-gradient-to-r from-cyan-500 to-fuchsia-500
@@ -27,7 +27,7 @@ const HeroSection = () => {
               text-xs font-medium uppercase mt-4"
               data-twe-ripple-init>
               Download CV
-            </button>
+            </button> */}
           </div>
         </div>
 
@@ -36,7 +36,7 @@ const HeroSection = () => {
             md:order-2 order-1 
             md:pl-16 p-1 grid place-items-center'>
           <img
-            className="h-full w-auto"
+            className="h-auto w-auto"
             src={profile}
             alt="Portfolio Picture"
           />

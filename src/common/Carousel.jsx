@@ -39,10 +39,10 @@ const Carousel = ({props}) => {
                 slideShadows: true,
             }}
             pagination={true}
-            autoplay={{
-                delay: 2000,
-                disableOnInteraction: false,
-              }}
+            // autoplay={{
+            //     delay: 2000,
+            //     disableOnInteraction: false,
+            //   }}
             initialSlide={Math.floor(props.length / 2)} 
             modules={[EffectCoverflow, Pagination, Autoplay]}
             className="mySwiper"
