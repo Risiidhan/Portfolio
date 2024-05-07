@@ -14,7 +14,7 @@ const Carousel = ({props}) => {
         const updateSlidesPerView = () => {
             if (window.innerWidth > 1300)
                 setSlidesPerView(3); 
-            else if (window.innerWidth > 768 && window.innerWidth < 1300) 
+            else if (window.innerWidth >= 768 && window.innerWidth < 1300) 
                     setSlidesPerView(2); 
             else
                 setSlidesPerView(1);
@@ -39,10 +39,10 @@ const Carousel = ({props}) => {
                 slideShadows: true,
             }}
             pagination={true}
-            // autoplay={{
-            //     delay: 2000,
-            //     disableOnInteraction: false,
-            //   }}
+            autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
             initialSlide={Math.floor(props.length / 2)} 
             modules={[EffectCoverflow, Pagination, Autoplay]}
             className="mySwiper"
