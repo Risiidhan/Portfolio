@@ -20,7 +20,7 @@ const Cards = ({ prop }) => {
             cards.forEach(card => {
                 maxHeight = Math.max(maxHeight, card.clientHeight);
             });
-            return maxHeight + 1; // Return the maxHeight value with the extra 1px
+            return maxHeight + 1;
         };
     
         const applyMaxHeight = () => {
@@ -29,10 +29,8 @@ const Cards = ({ prop }) => {
             cards.forEach(card => {
                 card.style.height = `${maxHeight}px`;
             });
-            console.log(maxHeight); // Log the maxHeight
         };
-    
-        applyMaxHeight(); // Apply max height initially
+        applyMaxHeight();
     }, []);
 
     return (

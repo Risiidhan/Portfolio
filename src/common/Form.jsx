@@ -49,7 +49,7 @@ const Form = () => {
                             <div className="col-span-full">
                                 <label htmlFor="From" className="block text-sm font-medium leading-6 ">Name</label>
                                 <div className="mt-2">
-                                    <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-fuchsia-600">
+                                    <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-fuchsia-400">
                                         <input type="text" name="from_name" id="from" autoComplete="from" className="block flex-1 border-0 bg-transparent py-1.5 pl-2  placeholder: focus:ring-0 sm:text-sm sm:leading-6" placeholder="janesmith" />
                                     </div>
                                 </div>
@@ -58,7 +58,7 @@ const Form = () => {
                             <div className="col-span-full">
                                 <label htmlFor="From" className="block text-sm font-medium leading-6 ">Email</label>
                                 <div className="mt-2">
-                                    <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-fuchsia-600">
+                                    <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-fuchsia-400">
                                         <input type="email" required name="user_email" id="from" autoComplete="from" className="block flex-1 border-0 bg-transparent py-1.5 pl-2  placeholder: focus:ring-0 sm:text-sm sm:leading-6" placeholder="janesmith@gmail.com" />
                                     </div>
                                 </div>
@@ -67,7 +67,7 @@ const Form = () => {
                             <div className="col-span-full">
                                 <label htmlFor="subject" className="block text-sm font-medium leading-6 ">Subject</label>
                                 <div className="mt-2">
-                                    <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-fuchsia-600">
+                                    <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-fuchsia-400">
                                         <input required type="text" name="subject" id="subject" autoComplete="subject" className="block flex-1 border-0 bg-transparent py-1.5 pl-2  placeholder: focus:ring-0 sm:text-sm sm:leading-6" />
                                     </div>
                                 </div>
@@ -75,8 +75,8 @@ const Form = () => {
 
                             <div className="col-span-full">
                                 <label htmlFor="Message" className="block text-sm font-medium leading-6 ">Message</label>
-                                <div className="mt-2 flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-fuchsia-600">
-                                    <textarea required id="about" name="message" rows="3" className="block w-full rounded-md border-0 py-1.5 px-2 bg-transparent shadow-sm ring-1 ring-inset ring-gray-300 placeholder: focus:ring-2 focus:ring-inset focus:ring-fuchsia-600 sm:text-sm sm:leading-6"></textarea>
+                                <div className="mt-2 flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-fuchsia-400">
+                                    <textarea required id="about" name="message" rows="3" className="block w-full rounded-md border-0 py-1.5 px-2 bg-transparent shadow-sm ring-1 ring-inset ring-gray-300 placeholder: focus:ring-2 focus:ring-inset focus:ring-fuchsia-400 sm:text-sm sm:leading-6"></textarea>
                                 </div>
                                 {showSuccess && (
                                     <div className='success-response-container items-end pt-2 flex gap-4 text-green-400'>
@@ -99,7 +99,7 @@ const Form = () => {
                     <div className="mt-1 flex items-center justify-end gap-x-6">
                         <button type="button" className="text-sm font-semibold leading-6"
                             onClick={() => resetForm()}>Cancel</button>
-                        <button type="submit" value="Send" className="border-2 border-amber-300 px-5 py-1 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuchsia-600">Send</button>
+                        <button type="submit" value="Send" className="border-2 border-amber-300 px-5 py-1 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuchsia-400">Send</button>
                     </div>
                 </div>
             </form>

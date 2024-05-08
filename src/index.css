@@ -49,7 +49,16 @@ body {
     width: 100%;
 }
 
+input:focus,
+textarea:focus,
+button:focus,
+select:focus {
+  outline: none;
+}
 
-
-
+@media only screen and (max-width: 768px) {
+    body {
+        background-image: url("./sections/assets/mobile-bg.png");
+    }
+}
 

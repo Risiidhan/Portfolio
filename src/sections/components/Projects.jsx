@@ -42,9 +42,7 @@ const Projects = () => {
         </motion.div>
         <div className='
                     md:col-span-3 col-span-4 
-                    place-items-center md:place-items-start
-                    px-6 py-6 tracking-wide text-left
-                    '>
+                    place-items-center md:place-items-start'>
           <Carousel props={cachedRepos} />
         </div>
       </div>
