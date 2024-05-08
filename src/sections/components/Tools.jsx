@@ -19,7 +19,7 @@ const Tools = () => {
                     <Marquee pauseOnHover>
                         <div className='flex items-center space-x-8 py-3 md:py-6'>
                             
-                            <a className='w-9 md:w-16 h-9 md:h-16 ml-1' href="https://angular.io" target="blank" rel="noreferrer"> <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" /> </a>
+                            <a className='w-9 md:w-16 h-9 md:h-16 mx-2' href="https://angular.io" target="blank" rel="noreferrer"> <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" /> </a>
                             <a className='w-9 md:w-16 h-9 md:h-16' href="https://nextjs.org/" target="blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" /></a>
                             <a className='w-9 md:w-16 h-9 md:h-16' href="https://reactjs.org/" target="blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" /> </a>
                             <a className='w-9 md:w-16 h-9 md:h-16' href="https://www.w3schools.com/cs/" target="blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" /> </a>
