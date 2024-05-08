@@ -16,9 +16,11 @@ const HeroSection = () => {
         <div className='md:col-span-1 col-span-2 md:order-1 order-2 grid place-items-center'>
           <div className="grid place-content-center">
             <span className='text-3xl md:text-4xl lg:text-8xl mb-1 font-semibold tracking-widest'>Hi,</span>
-            <span className='text-3xl md:text-4xl lg:text-6xl mb-5 font-semibold tracking-widest'>I'm Risiidhan Punniymoorthy</span>
-            <span className='text-base tracking-widest mb-5'>Software engineer | BEng in (Hons) | Full-Stack Developer</span>
-            <span className='text-base tracking-widest'>WELCOME TO MY PORTFOLIO</span>
+            <p className='text-3xl md:text-4xl lg:text-6xl mb-5 font-semibold tracking-widest'>I'm Risiidhan Punniymoorthy</p>
+            <p className='text-base tracking-widest mb-5'>Software engineer | BEng in (Hons) | Full-Stack Developer</p>
+            <div className='typewriter'>
+              <p className='text-base tracking-widest'>WELCOME TO MY PORTFOLIO</p>
+            </div>
             {/* <button
               type="button"
               className="

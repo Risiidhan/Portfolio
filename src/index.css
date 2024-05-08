@@ -63,3 +63,28 @@ select:focus {
         background-image: url("./sections/assets/mobile-bg.png");
     }
 }
+
+.typewriter {
+    display: inline-block;
+    width: fit-content;
+}
+
+.typewriter p {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden; 
+    border-right: .15em solid orange; 
+    animation: 
+      typing 2s steps(24),
+      blink-caret .4s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
