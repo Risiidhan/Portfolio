@@ -10,29 +10,21 @@ import { useState, useEffect } from 'react';
 
 const Carousel = ({props}) => {
     const [slidesPerView, setSlidesPerView] = useState(2);
-    const [initialized, setInitialized] = useState(false);
 
     useEffect(() => {
-      const initializeSwiper = async () => {
         const updateSlidesPerView = () => {
-          if (window.innerWidth > 1300)
-            setSlidesPerView(3);
-          else if (window.innerWidth >= 768 && window.innerWidth < 1300)
-            setSlidesPerView(2);
-          else
-            setSlidesPerView(1);
+            if (window.innerWidth > 1300)
+                setSlidesPerView(3); 
+            else if (window.innerWidth >= 768 && window.innerWidth < 1300) 
+                    setSlidesPerView(2); 
+            else
+                setSlidesPerView(1);
         };
-        updateSlidesPerView();
-        setInitialized(true);
-      };
-  
-      initializeSwiper();
-    }, []);
 
-    if (!initialized) {
-        return <div>Loading...</div>;
-      }
-    
+        updateSlidesPerView();
+        window.addEventListener('resize', updateSlidesPerView);
+        return () => window.removeEventListener('resize', updateSlidesPerView);
+    }, []);
 
     return (
         <Swiper
