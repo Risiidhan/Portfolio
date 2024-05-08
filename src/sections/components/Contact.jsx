@@ -25,7 +25,13 @@ const Contact = () => {
                     <span className='text-3xl md:text-3xl lg:text-5xl mb-5 font-semibold'>
                         Connect with me
                         <div className='flex justify-center gap-6 py-6'>
-                            <a className='w-9 h-9' href="https://x.com/risiidhan" target="blank"><img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg" alt="risiidhan" /></a>
+                            <a className='w-9 h-9' href="https://x.com/risiidhan" target="blank">
+                                
+            <svg viewBox="0 0 128 128">
+            <path d="M75.916 54.2 122.542 0h-11.05L71.008 47.06 38.672 0H1.376l48.898 71.164L1.376 128h11.05L55.18 78.303 89.328 128h37.296L75.913 54.2ZM60.782 71.79l-4.955-7.086-39.42-56.386h16.972L65.19 53.824l4.954 7.086 41.353 59.15h-16.97L60.782 71.793Z" fill="#FFFFFF"></path>
+            </svg>
+          
+                            </a>
                             <a className='w-9 h-9' href="https://www.linkedin.com/in/risiidhan/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="risiidhan punniyamoorthy" /></a>
                             <a className='w-9 h-9' href="https://instagram.com/risiidhan" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="risiidhan" /></a>
                             <a className='w-9 h-9' href="https://www.hackerrank.com/rkishon4" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="risiidhan" /></a>

@@ -18,25 +18,26 @@ const Tools = () => {
                         Languages and Frameworks:</h1>
                     <Marquee pauseOnHover>
                         <div className='flex items-center space-x-8 py-3 md:py-6'>
-                            <a className='w-9 md:w-16 h-9 md:h-16 mx-3' href="https://angular.io" target="blank" rel="noreferrer"> <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" /> </a>
-                            <a className='w-9 md:w-16 h-9 md:h-16' href="https://nextjs.org/" target="blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="nextjs" /> </a>
+                            
+                            <a className='w-9 md:w-16 h-9 md:h-16 ml-1' href="https://angular.io" target="blank" rel="noreferrer"> <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" /> </a>
+                            <a className='w-9 md:w-16 h-9 md:h-16' href="https://nextjs.org/" target="blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" /></a>
                             <a className='w-9 md:w-16 h-9 md:h-16' href="https://reactjs.org/" target="blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" /> </a>
                             <a className='w-9 md:w-16 h-9 md:h-16' href="https://www.w3schools.com/cs/" target="blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" /> </a>
 
-                            <a className='w-9 md:w-16 h-9 md:h-16' href="https://nodejs.org" target="blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" /> </a>
-                            <a className='w-9 md:w-16 h-9 md:h-16' href="https://dotnet.microsoft.com/" target="blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg" alt="dotnet" /> </a>
-                            <a className='w-9 md:w-16 h-9 md:h-16' href="https://expressjs.com" target="blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" /> </a>
+                            <a className='w-9 md:w-16 h-9 md:h-16' href="https://nodejs.org" target="blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg" /></a>
+                            <a className='w-9 md:w-16 h-9 md:h-16' href="https://dotnet.microsoft.com/" target="blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg" /></a>
+                            <a className='w-9 md:w-16 h-9 md:h-16' href="https://expressjs.com" target="blank" rel="noreferrer"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" /></a>
                             <a className='w-9 md:w-16 h-9 md:h-16' href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" /> </a>
-                            <a className='w-9 md:w-16 h-9 md:h-16' href="https://www.docker.com/" target="blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" /> </a>
+                            <a className='w-9 md:w-16 h-9 md:h-16' href="https://www.docker.com/" target="blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" /></a>
                             <a className='w-9 md:w-16 h-9 md:h-16' href="https://www.mysql.com/" target="blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" /> </a>
 
-                            <a className='w-9 md:w-16 h-9 md:h-16' href="https://www.mongodb.com/" target="blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" /> </a>
+                            <a className='w-9 md:w-16 h-9 md:h-16' href="https://www.mongodb.com/" target="blank" rel="noreferrer"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" /></a>
                             <a className='w-9 md:w-16 h-9 md:h-16' href="https://postman.com" target="blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" /> </a>
-                            <a className='w-9 md:w-16 h-9 md:h-16' href="https://www.microsoft.com/en-us/sql-server" target="blank" rel="noreferrer"> <img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" alt="mssql" /> </a>
+                            <a className='w-9 md:w-16 h-9 md:h-16' href="https://www.microsoft.com/en-us/sql-server" target="blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" /></a>
                             <a className='w-9 md:w-16 h-9 md:h-16' href="https://firebase.google.com/" target="blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" /> </a>
                             <a className='w-9 md:w-16 h-9 md:h-16' href="https://git-scm.com/" target="blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" /> </a>
 
-                            <a className='w-9 md:w-16 h-9 md:h-16' href="https://getbootstrap.com" target="blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" /> </a>
+                            <a className='w-9 md:w-16 h-9 md:h-16' href="https://getbootstrap.com" target="blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" /></a>
                             <a className='w-9 md:w-16 h-9 md:h-16' href="https://www.chartjs.org" target="blank" rel="noreferrer"> <img src="https://www.chartjs.org/media/logo-title.svg" alt="chartjs" /> </a>
                             <a className='w-9 md:w-16 h-9 md:h-16' href="https://tailwindcss.com/" target="blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" /> </a>
 
