@@ -56,7 +56,7 @@ const Cards = ({ prop }) => {
                 <p className="text-sm pt-3 md:pb-6 block font-sans text-base font-light leading-relaxed antialiased">
                     {prop.description}
                 </p>
-                <div className="flex items-center gap-2 absolute bottom-3 mb-5">
+                <div className="flex items-center gap-2 absolute bottom-3 mb-4">
                     <button
                         className="flex justify-center items-center border-2 text-xs px-3 py-1 border-amber-300"
                         type="button"
