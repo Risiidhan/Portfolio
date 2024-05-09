@@ -20,7 +20,12 @@ const Cards = ({ prop }) => {
             cards.forEach(card => {
                 maxHeight = Math.max(maxHeight, card.clientHeight);
             });
-            return maxHeight + 1;
+            if (window.innerWidth > 1300)
+                return maxHeight + 2;
+            else if (window.innerWidth >= 768 && window.innerWidth < 1300) 
+                return maxHeight + 2;
+            else
+                return maxHeight + 3;
         };
     
         const applyMaxHeight = () => {
@@ -50,10 +55,10 @@ const Cards = ({ prop }) => {
                 <h5 className="block font-sans text-xl font-medium  ">
                     {prop.name}
                 </h5>
-                <p className="text-sm py-3 pb-6 block font-sans text-base font-light leading-relaxed antialiased">
+                <p className="text-sm pt-3 md:pb-6 block font-sans text-base font-light leading-relaxed antialiased">
                     {prop.description}
                 </p>
-                <div className="flex items-center gap-2 absolute bottom-1 mb-3 md:mb-2.5">
+                <div className="flex items-center gap-2 absolute bottom-3 mb-5">
                     <button
                         className="flex justify-center items-center border-2 text-xs px-3 py-1 border-amber-300"
                         type="button"
