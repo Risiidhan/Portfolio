@@ -20,9 +20,7 @@ const Cards = ({ prop }) => {
             cards.forEach(card => {
                 maxHeight = Math.max(maxHeight, card.clientHeight);
             });
-            if (window.innerWidth > 1300)
-                return maxHeight + 2;
-            else if (window.innerWidth >= 768 && window.innerWidth < 1300) 
+            if (window.innerWidth >= 768) 
                 return maxHeight + 2;
             else
                 return maxHeight + 3;
