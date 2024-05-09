@@ -23,7 +23,7 @@ const Cards = ({ prop }) => {
             if (window.innerWidth >= 768) 
                 return maxHeight + 2;
             else
-                return maxHeight + 3;
+                return maxHeight + 5;
         };
     
         const applyMaxHeight = () => {
