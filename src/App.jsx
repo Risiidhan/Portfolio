@@ -4,6 +4,7 @@ import Contact from './sections/components/Contact'
 import HeroSection from './sections/components/HeroSection'
 import Navbar from './sections/components/Navbar'
 import Projects from './sections/components/Projects'
+import Stats from './sections/components/Stats'
 import Tools from './sections/components/Tools'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Tools />
           <About />
           <Projects />
+          <Stats />
           <Contact />
         </div>
       </section>
