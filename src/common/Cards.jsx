@@ -1,20 +1,32 @@
-import React from 'react'
+import React, { memo } from 'react';
 import { useEffect, useRef } from 'react';
 import { FaGithub, FaLink, FaStar } from "react-icons/fa"
 import { TbGitFork } from "react-icons/tb";
 
 
-
 const Cards = ({ prop }) => {
 
     const cardRef = useRef(null);
-    let lang = prop.language.toLowerCase();
-    lang == 'html' ? lang = 'html5' : lang = lang;
-    lang == 'c#' ? lang = 'csharp' : lang = lang;
 
-    let aboutBreakdown = prop.description?.split('Framework ');
-    let description = aboutBreakdown[0]
-    let frameworks = aboutBreakdown[1]?.split(',') ? aboutBreakdown[1]?.split(',') : aboutBreakdown[1];
+    const renderIcons = () => {
+        let lang = prop.language.toLowerCase();
+        lang === 'html' ? (lang = 'html5') : (lang = lang);
+        lang === 'c#' ? (lang = 'csharp') : (lang = lang);
+
+        let description = prop?.description ?? '';
+        let frameworks = description?.split('Framework ')[1]?.split(',') || [lang];
+
+        return frameworks.map((framework) => (
+            <img key={framework} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${framework}/${framework}-original.svg`} />
+        ));
+    };
+
+    // let lang = prop.language.toLowerCase();
+    // lang == 'html' ? lang = 'html5' : lang = lang;
+    // lang == 'c#' ? lang = 'csharp' : lang = lang;
+    // let aboutBreakdown = prop.description?.split('Framework ');
+    // let description = aboutBreakdown[0]
+    // let frameworks = aboutBreakdown[1]?.split(',') ? aboutBreakdown[1]?.split(',') : aboutBreakdown[1];
 
     useEffect(() => {
         const setMaxHeight = () => {
@@ -23,10 +35,7 @@ const Cards = ({ prop }) => {
             cards.forEach(card => {
                 maxHeight = Math.max(maxHeight, card.clientHeight);
             });
-            if (window.innerWidth >= 768)
-                return maxHeight + 2;
-            else
-                return maxHeight + 5;
+            return window.innerWidth >= 768? maxHeight + 2 : maxHeight + 5;
         };
 
         const applyMaxHeight = () => {
@@ -44,18 +53,8 @@ const Cards = ({ prop }) => {
             <div ref={cardRef} className="inner-glass-effect px-6 py-3 card-container">
                 <div className="flex items-center justify-between py-2">
                     <div className='w-6 h-6 2xl:w-9 2xl:h-9 flex gap-2'>
-                        {frameworks && (
-                            frameworks.map((framework) => (
-                                    <img key={framework} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${framework}/${framework}-original.svg`} />
-                            ))
-                        )}
-                        {!frameworks && (
-                            <img src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${lang}/${lang}-original.svg`} />
-                        )}
+                    {renderIcons()}
                     </div>
-
-
-
                     <div className='flex justify-end items-center gap-1 w-24 h-px 2xl:w-32'>
                         <FaStar /> {prop.stargazers_count}
                         <TbGitFork /> {prop.forks_count}
@@ -66,7 +65,7 @@ const Cards = ({ prop }) => {
                     {prop.name}
                 </h5>
                 <p className="text-sm 2xl:text-3xl pt-3 md:pb-6 block font-sans text-base font-light leading-relaxed antialiased">
-                    {description}
+                    {prop.description}
                 </p>
                 <div className="flex items-center gap-2 absolute bottom-3 mb-4">
                     <button
@@ -98,4 +97,4 @@ const Cards = ({ prop }) => {
     )
 }
 
-export default Cards
+export default memo(Cards);

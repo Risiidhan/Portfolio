@@ -1,35 +1,19 @@
-import { useState,useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../partials/framer-motion'
 
 const Stats = () => {
 
     let statWidth = 0
-
+    let containerMotion = "show";
     if (window.innerWidth > 1300)
         statWidth = 700
     else if (window.innerWidth >= 768 && window.innerWidth < 1300)
         statWidth = 500
-    else
+    else{
+        containerMotion = "hidden"
         statWidth = 250
+    }
 
-
-    const [containerMotion, setContainerMotion] = useState("hidden");
-    const [headindMotion, setHeadindMotion] = useState("hidden");
-
-    useEffect(() => {
-        const setContainerVisibility = () => {
-            if (window.innerWidth >= 768) {
-                setContainerMotion("show");
-                setHeadindMotion("show");
-            }
-            else {
-                setHeadindMotion("show");
-                setContainerMotion("hidden");
-            }
-        };
-        setContainerVisibility();
-    }, []);
 
     return (
         <>
@@ -40,7 +24,7 @@ const Stats = () => {
                 whileInView={containerMotion}
                 viewport={{ once: false, amount: 0.7 }}
 
-                className="lg:h-96 my-28 grid grid-cols-3 gap-4 md:pt-0 lg:pt-28   2xl:pt-80">
+                className="lg:h-96 my-28 grid grid-cols-3 gap-4 md:pt-0 lg:pt-28 2xl:pt-96">
                 <div
                     className='
                         md:col-span-2 col-span-3 
@@ -51,13 +35,13 @@ const Stats = () => {
                     <img src={`https://github-readme-stats.vercel.app/api/top-langs?username=risiidhan&showicons=true&locale=en&layout=compact&theme=bear&hide_border=true&card_width=${statWidth}px&line_height=50`} alt="" />
                 </div>
                 <motion.div
-                    id="stats"
+                    id="stats-title"
                     variants={fadeIn("right", 0.2)}
                     initial="hidden"
-                    whileInView={headindMotion}
+                    whileInView={"show"}
                     viewport={{ once: false, amount: 0.7 }}
                     className='md:col-span-1 col-span-3 md:order-2 order-1 grid place-items-center'>
-                    <span className='text-3xl md:text-3xl lg:text-4xl   2xl:text-7xl mb-5 font-semibold'>
+                    <span className='text-3xl md:text-2xl lg:text-4xl 2xl:text-7xl mb-5 lg:pl-4 font-semibold'>
                         Github Statistics
                     </span>
                 </motion.div>

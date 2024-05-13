@@ -1,26 +1,12 @@
-import { useState, useEffect } from 'react'
 import Form from '../../common/Form'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../partials/framer-motion'
 
 const Contact = () => {
 
-    const [containerMotion, setContainerMotion] = useState("hidden");
-    const [headindMotion, setHeadindMotion] = useState("hidden");
+    const isMobile = window.innerWidth <= 768;
+    const containerMotion = isMobile ? "hidden" : "show";
 
-    useEffect(() => {
-        const setContainerVisibility = () => {
-            if (window.innerWidth >= 768) {
-                setContainerMotion("show");
-                setHeadindMotion("show");
-            }
-            else {
-                setHeadindMotion("show");
-                setContainerMotion("hidden");
-            }
-        };
-        setContainerVisibility();
-    }, []);
     return (
         <>
             <motion.div
@@ -39,10 +25,10 @@ const Contact = () => {
                     <Form />
                 </div>
                 <motion.div
-                    id='contact'
+                    id='contact-title'
                     variants={fadeIn("right", 0.2)}
                     initial="hidden"
-                    whileInView={headindMotion}
+                    whileInView={"show"}
                     viewport={{ once: false, amount: 0.7 }}
                     className='md:col-span-2 col-span-4 md:order-2 order-1 grid place-items-center'>
                     <span className='text-3xl md:text-3xl lg:text-5xl  2xl:text-7xl mb-5 font-semibold'>
