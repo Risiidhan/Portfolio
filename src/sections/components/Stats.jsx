@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState,useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../partials/framer-motion'
 
@@ -13,16 +13,34 @@ const Stats = () => {
     else
         statWidth = 250
 
+
+    const [containerMotion, setContainerMotion] = useState("hidden");
+    const [headindMotion, setHeadindMotion] = useState("hidden");
+
+    useEffect(() => {
+        const setContainerVisibility = () => {
+            if (window.innerWidth >= 768) {
+                setContainerMotion("show");
+                setHeadindMotion("show");
+            }
+            else {
+                setHeadindMotion("show");
+                setContainerMotion("hidden");
+            }
+        };
+        setContainerVisibility();
+    }, []);
+
     return (
         <>
             <motion.div
-                id="about"
+                id="stats"
                 variants={fadeIn("up", 0.2)}
                 initial="hidden"
-                whileInView={"show"}
+                whileInView={containerMotion}
                 viewport={{ once: false, amount: 0.7 }}
 
-                className="lg:h-96 my-28 grid grid-cols-3 gap-4 md:pt-0 lg:pt-28 xl:pt-80">
+                className="lg:h-96 my-28 grid grid-cols-3 gap-4 md:pt-0 lg:pt-28   2xl:pt-80">
                 <div
                     className='
                         md:col-span-2 col-span-3 
@@ -32,11 +50,17 @@ const Stats = () => {
                         '>
                     <img src={`https://github-readme-stats.vercel.app/api/top-langs?username=risiidhan&showicons=true&locale=en&layout=compact&theme=bear&hide_border=true&card_width=${statWidth}px&line_height=50`} alt="" />
                 </div>
-                <div className='md:col-span-1 col-span-3 md:order-2 order-1 grid place-items-center'>
-                    <span className='text-3xl md:text-3xl lg:text-4xl xl:text-7xl mb-5 font-semibold'>
+                <motion.div
+                    id="stats"
+                    variants={fadeIn("right", 0.2)}
+                    initial="hidden"
+                    whileInView={headindMotion}
+                    viewport={{ once: false, amount: 0.7 }}
+                    className='md:col-span-1 col-span-3 md:order-2 order-1 grid place-items-center'>
+                    <span className='text-3xl md:text-3xl lg:text-4xl   2xl:text-7xl mb-5 font-semibold'>
                         Github Statistics
                     </span>
-                </div>
+                </motion.div>
             </motion.div>
         </>
     )
