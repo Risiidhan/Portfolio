@@ -22,7 +22,7 @@ const Stats = () => {
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.7 }}
 
-                className="lg:h-96 my-28 grid grid-cols-3 gap-4 md:pt-0 lg:pt-28">
+                className="lg:h-96 my-28 grid grid-cols-3 gap-4 md:pt-0 lg:pt-28 xl:pt-80">
                 <div
                     className='
                         md:col-span-2 col-span-3 
@@ -33,7 +33,7 @@ const Stats = () => {
                     <img src={`https://github-readme-stats.vercel.app/api/top-langs?username=risiidhan&showicons=true&locale=en&layout=compact&theme=bear&hide_border=true&card_width=${statWidth}px&line_height=50`} alt="" />
                 </div>
                 <div className='md:col-span-1 col-span-3 md:order-2 order-1 grid place-items-center'>
-                    <span className='text-3xl md:text-3xl lg:text-4xl mb-5 font-semibold'>
+                    <span className='text-3xl md:text-3xl lg:text-4xl xl:text-7xl mb-5 font-semibold'>
                         Github Statistics
                     </span>
                 </div>

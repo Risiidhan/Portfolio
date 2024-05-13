@@ -18,7 +18,7 @@ const About = () => {
             md:col-span-2 col-span-3 
             border-2 rounded-xl border-fuchsia-300
             md:order-1 order-2 grid place-items-center md:place-items-start
-            px-6 py-6 tracking-wide text-center md:text-justify
+            px-6 py-6 xl:text-3xl tracking-wide text-center md:text-justify
             '>
           <div className='icon-container text-4xl md:text-5xl text-left md:text-left my-3'>
             <FaCode />
@@ -39,7 +39,7 @@ const About = () => {
           strong aptitude for academic excellence and a passion for continuous learning.
         </div>
         <div className='md:col-span-1 col-span-3 md:order-2 order-1 grid place-items-center'>
-          <span className='text-3xl md:text-4xl lg:text-6xl mb-5 font-semibold'>
+          <span className='text-3xl md:text-4xl lg:text-6xl xl:text-8xl mb-5 font-semibold'>
             About Me
           </span>
         </div>

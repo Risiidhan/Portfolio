@@ -43,7 +43,7 @@ const Cards = ({ prop }) => {
         <>
             <div ref={cardRef} className="inner-glass-effect px-6 py-3 card-container">
                 <div className="flex items-center justify-between py-2">
-                    <div className='w-6 h-6 flex gap-2'>
+                    <div className='w-6 h-6 xl:w-9 xl:h-9 flex gap-2'>
                         {frameworks && (
                             frameworks.map((framework) => (
                                     <img key={framework} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${framework}/${framework}-original.svg`} />
@@ -56,21 +56,21 @@ const Cards = ({ prop }) => {
 
 
 
-                    <div className='flex justify-end items-center gap-1 w-24 h-px'>
+                    <div className='flex justify-end items-center gap-1 w-24 h-px xl:w-32'>
                         <FaStar /> {prop.stargazers_count}
                         <TbGitFork /> {prop.forks_count}
                     </div>
                 </div>
 
-                <h5 className="block font-sans text-xl font-medium  ">
+                <h5 className="block font-sans text-xl xl:text-3xl font-medium  ">
                     {prop.name}
                 </h5>
-                <p className="text-sm pt-3 md:pb-6 block font-sans text-base font-light leading-relaxed antialiased">
+                <p className="text-sm xl:text-2xl pt-3 md:pb-6 block font-sans text-base font-light leading-relaxed antialiased">
                     {description}
                 </p>
                 <div className="flex items-center gap-2 absolute bottom-3 mb-4">
                     <button
-                        className="flex justify-center items-center border-2 text-xs px-3 py-1 border-amber-300"
+                        className="flex justify-center items-center border-2 text-xs xl:text-lg px-3 py-1 border-amber-300"
                         type="button"
                         data-ripple-light="true"
                         onClick={() => window.open(prop.html_url, "_blank")}
@@ -80,7 +80,7 @@ const Cards = ({ prop }) => {
                     </button>
                     {prop.homepage && (
                         <button
-                            className="flex justify-center items-center border-2 text-xs px-3 py-1 border-amber-300"
+                            className="flex justify-center items-center border-2 text-xs xl:text-lg px-3 py-1 border-amber-300"
                             type="button"
                             data-ripple-light="true"
                             onClick={() => window.open(prop.homepage, "_blank")}

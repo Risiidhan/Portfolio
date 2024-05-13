@@ -58,12 +58,6 @@ select:focus {
     outline: none;
 }
 
-@media only screen and (max-width: 768px) {
-    body {
-        background-image: url("./sections/assets/mobile-bg.png");
-    }
-}
-
 .typewriter {
     display: inline-block;
     width: fit-content;
@@ -88,3 +82,16 @@ select:focus {
     from, to { border-color: transparent }
     50% { border-color: orange; }
   }
+
+  @media only screen and (max-width: 768px) {
+    body {
+        background-image: url("./sections/assets/mobile-bg.png");
+    }
+}
+
+@layer utilities {
+    .pt-40rem {
+      padding-top: 40rem;
+    }
+  }
+  

@@ -12,10 +12,10 @@ const Navbar = () => {
                             </div>
                             <div className="hidden sm:ml-6 sm:block">
                                 <div className="flex space-x-4">
-                                    <a href="#hero" className=" active:underline decoration-fuchsia-500 underline-offset-4 decoration-2 text-white hover:underline rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
-                                    <a href="#about" className="active:underline decoration-fuchsia-500 underline-offset-4 decoration-2 cursor-pointer hover:underline hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
-                                    <a href="#projects" className="active:underline decoration-fuchsia-500 underline-offset-4 decoration-2 cursor-pointer hover:underline hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
-                                    <a href="#contact" className="active:underline decoration-fuchsia-500 underline-offset-4 decoration-2 cursor-pointer hover:underline hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+                                    <a href="#hero" className=" active:underline decoration-fuchsia-500 underline-offset-4 decoration-2 text-white hover:underline rounded-md px-3 py-2 text-sm xl:text-3xl font-medium" aria-current="page">Home</a>
+                                    <a href="#about" className="active:underline decoration-fuchsia-500 underline-offset-4 decoration-2 cursor-pointer hover:underline hover:text-white rounded-md px-3 py-2 text-sm xl:text-3xl font-medium">About</a>
+                                    <a href="#projects" className="active:underline decoration-fuchsia-500 underline-offset-4 decoration-2 cursor-pointer hover:underline hover:text-white rounded-md px-3 py-2 text-sm xl:text-3xl font-medium">Projects</a>
+                                    <a href="#contact" className="active:underline decoration-fuchsia-500 underline-offset-4 decoration-2 cursor-pointer hover:underline hover:text-white rounded-md px-3 py-2 text-sm xl:text-3xl font-medium">Contact</a>
                                 </div>
                             </div>
                         </div>
