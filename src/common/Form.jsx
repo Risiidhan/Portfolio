@@ -50,7 +50,7 @@ const Form = () => {
                                 <label htmlFor="From" className="block text-sm xl:text-3xl font-medium leading-6 ">Name</label>
                                 <div className="mt-2">
                                     <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-fuchsia-400">
-                                        <input type="text" name="from_name" id="from" autoComplete="from" className="block flex-1 border-0 bg-transparent py-1.5 pl-2  placeholder: focus:ring-0 sm:text-sm sm:leading-6" placeholder="janesmith" />
+                                        <input type="text" name="from_name" id="from" autoComplete="from" className="block flex-1 border-0 bg-transparent py-1.5 pl-2  placeholder: focus:ring-0 sm:text-sm xl:text-2xl sm:leading-6" placeholder="janesmith" />
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@ const Form = () => {
                                 <label htmlFor="From" className="block text-sm xl:text-3xl font-medium leading-6 ">Email</label>
                                 <div className="mt-2">
                                     <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-fuchsia-400">
-                                        <input type="email" required name="user_email" id="from" autoComplete="from" className="block flex-1 border-0 bg-transparent py-1.5 pl-2  placeholder: focus:ring-0 sm:text-sm sm:leading-6" placeholder="janesmith@gmail.com" />
+                                        <input type="email" required name="user_email" id="from" autoComplete="from" className="block flex-1 border-0 bg-transparent py-1.5 pl-2  placeholder: focus:ring-0 sm:text-sm xl:text-2xl sm:leading-6" placeholder="janesmith@gmail.com" />
                                     </div>
                                 </div>
                             </div>
@@ -68,7 +68,7 @@ const Form = () => {
                                 <label htmlFor="subject" className="block text-sm xl:text-3xl font-medium leading-6 ">Subject</label>
                                 <div className="mt-2">
                                     <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-fuchsia-400">
-                                        <input required type="text" name="subject" id="subject" autoComplete="subject" className="block flex-1 border-0 bg-transparent py-1.5 pl-2  placeholder: focus:ring-0 sm:text-sm sm:leading-6" />
+                                        <input required type="text" name="subject" id="subject" autoComplete="subject" className="block flex-1 border-0 bg-transparent py-1.5 pl-2  placeholder: focus:ring-0 sm:text-sm xl:text-2xl sm:leading-6" />
                                     </div>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@ const Form = () => {
                             <div className="col-span-full">
                                 <label htmlFor="Message" className="block text-sm xl:text-3xl font-medium leading-6 ">Message</label>
                                 <div className="mt-2 flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-fuchsia-400">
-                                    <textarea required id="about" name="message" rows="3" className="block w-full rounded-md border-0 py-1.5 px-2 bg-transparent shadow-sm ring-1 ring-inset ring-gray-300 placeholder: focus:ring-2 focus:ring-inset focus:ring-fuchsia-400 sm:text-sm sm:leading-6"></textarea>
+                                    <textarea required id="about" name="message" rows="3" className="block w-full rounded-md border-0 py-1.5 px-2 bg-transparent shadow-sm ring-1 ring-inset ring-gray-300 placeholder: focus:ring-2 focus:ring-inset focus:ring-fuchsia-400 sm:text-sm xl:text-2xl sm:leading-6"></textarea>
                                 </div>
                                 {showSuccess && (
                                     <div className='success-response-container items-end pt-2 flex gap-4 text-green-400'>

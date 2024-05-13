@@ -24,7 +24,7 @@ const Contact = () => {
                 <div className='md:col-span-2 col-span-4 md:order-2 order-1 grid place-items-center'>
                     <span className='text-3xl md:text-3xl lg:text-5xl xl:text-7xl mb-5 font-semibold'>
                         Connect with me
-                        <div className='flex justify-center gap-6 py-6'>
+                        <div className='flex justify-center gap-6 xl:gap-12 py-6'>
                             <a className='w-9 h-9 xl:w-16' href="https://x.com/risiidhan" target="blank">
 
                                 <svg viewBox="0 0 128 128">
