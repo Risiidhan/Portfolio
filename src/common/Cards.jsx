@@ -24,8 +24,8 @@ const Cards = ({ prop }) => {
     // let lang = prop.language.toLowerCase();
     // lang == 'html' ? lang = 'html5' : lang = lang;
     // lang == 'c#' ? lang = 'csharp' : lang = lang;
-    // let aboutBreakdown = prop.description?.split('Framework ');
-    // let description = aboutBreakdown[0]
+    let aboutBreakdown = prop.description?.split('Framework ');
+    let description = aboutBreakdown[0]
     // let frameworks = aboutBreakdown[1]?.split(',') ? aboutBreakdown[1]?.split(',') : aboutBreakdown[1];
 
     useEffect(() => {
@@ -65,7 +65,7 @@ const Cards = ({ prop }) => {
                     {prop.name}
                 </h5>
                 <p className="text-sm 2xl:text-3xl pt-3 md:pb-6 block font-sans text-base font-light leading-relaxed antialiased">
-                    {prop.description}
+                    {description}
                 </p>
                 <div className="flex items-center gap-2 absolute bottom-3 mb-4">
                     <button
