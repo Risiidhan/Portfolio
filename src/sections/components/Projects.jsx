@@ -25,24 +25,24 @@ const Projects = () => {
 
   return (
     <>
-      <div id='projects' className="lg:h-96 my-28 grid grid-cols-4 gap-3 md:pt-0 lg:pt-32 2xl:pt-64">
+      <div id='projects' className="content-section grid grid-cols-4 gap-3 md:my-12 ">
         <motion.div
           variants={fadeIn("right", 0.2)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.7 }}
           className='md:col-span-1 col-span-4  grid place-items-center'>
-          <span className='text-3xl md:text-4xl lg:text-5xl font-semibold text-center md:text-left'>
+          <span className='text-3xl font-semibold text-center md:text-left'>
             Projects
             <br />
-            <a className='text-sm md:text-md lg:text-lg   2xl:text-4xl mb-5 underline underline-offset-8  cursor-pointer'
+            <a className='text-sm md:text-md mb-5 underline underline-offset-8  cursor-pointer'
               onClick={() => window.open('https://github.com/Risiidhan?tab=repositories', "_blank")}>
               View All Projects - Github
             </a>
           </span>
         </motion.div>
         <div className='
-                    md:col-span-3 col-span-4 
+                    md:col-span-3 col-span-4 lg:h-96 xl:h-[44rem]
                     place-items-center md:place-items-start pt-6'>
            <MemoizedCarousel props={cachedRepos} />
         </div>

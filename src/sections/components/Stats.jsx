@@ -16,7 +16,7 @@ const Stats = () => {
 
 
     return (
-        <>
+        <section className='content-section'>
             <motion.div
                 id="stats"
                 variants={fadeIn("up", 0.2)}
@@ -24,7 +24,7 @@ const Stats = () => {
                 whileInView={containerMotion}
                 viewport={{ once: false, amount: 0.7 }}
 
-                className="lg:h-96 my-28 grid grid-cols-3 gap-4 md:pt-0 lg:pt-28 2xl:pt-96">
+                className="lg:h-96 my-28 grid grid-cols-3 gap-4">
                 <div
                     className='
                         md:col-span-2 col-span-3 
@@ -41,12 +41,12 @@ const Stats = () => {
                     whileInView={"show"}
                     viewport={{ once: false, amount: 0.7 }}
                     className='md:col-span-1 col-span-3 md:order-2 order-1 grid place-items-center'>
-                    <span className='text-3xl md:text-2xl lg:text-4xl 2xl:text-7xl mb-5 lg:pl-4 font-semibold'>
+                    <span className='text-3xl md:text-2xl mb-5 lg:pl-4 font-semibold'>
                         Github Statistics
                     </span>
                 </motion.div>
             </motion.div>
-        </>
+        </section>
     )
 }
 

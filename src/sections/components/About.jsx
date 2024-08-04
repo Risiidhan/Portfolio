@@ -15,15 +15,16 @@ const About = () => {
         initial="hidden"
         whileInView={containerMotion}
         viewport={{ once: false, amount: 0.7 }}
-        className="lg:h-96 my-28 grid grid-cols-3 gap-4 md:pt-0 lg:pt-20">
+        className="content-section md:my-12 grid grid-cols-3 gap-4">
         <div
           className='
+          
             md:col-span-2 col-span-3 
             border-2 rounded-xl border-fuchsia-300
             md:order-1 order-2 grid place-items-center md:place-items-start
             px-6 py-6 2xl:text-3xl tracking-wide text-center md:text-justify
             '>
-          <div className='icon-container text-4xl md:text-5xl text-left md:text-left my-3'>
+          <div className='icon-container text-4xl md:text-left my-3'>
             <FaCode />
           </div>
               Hi Im Risiidhan, as a Software Engineer I have demonstrated a strong ability
@@ -48,7 +49,7 @@ const About = () => {
           whileInView={"show"}
           viewport={{ once: false, amount: 0.7 }}
           className='md:col-span-1 col-span-3 md:order-2 order-1 grid place-items-center'>
-          <span className='text-3xl md:text-4xl lg:text-5xl 2xl:text-8xl mb-5 font-semibold'>
+          <span className='text-3xl mb-5 font-semibold'>
             About Me
           </span>
         </motion.div>
